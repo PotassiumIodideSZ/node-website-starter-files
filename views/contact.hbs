@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="/css/styleguide.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="text/javascript" src="/js/drawingBoard.js"></script>
+</head>
+
+<body>
+    <div class="day">
+        <div class="maindiv-wrapper">
+            <div class="board">
+                <div id="canvas-wrapper" class="canvas-wrapper">
+                    <canvas id="canvas" class="canvas" onclick="drawShape(event, shape, color)">
+                        Your browser does not support HTML5 canvas.
+                    </canvas>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="top-section">
+                    <div class="title">Доска для рисования</div>
+                    <div class="divider"></div>
+                    <div class="how-to">
+                        <div class="text-wrapper">Фигуры</div>
+                        <div class="instructions">
+                            <div class="shape-button-panel shapes-panel">
+                                <button id="circle" class="shape-button picked" onclick="shapeButton('circle', this)">●</button>
+                                <button id="square" class="shape-button" onclick="shapeButton('square', this)">■</button>
+                                <button id="triangle" class="shape-button" onclick="shapeButton('triangle', this)">▲</button>
+                            </div>
+                            
+                        </div>
+                        <div class="text-wrapper">Цвета</div>
+                        <div class="instructions">
+                            
+                            <div class="color-button-panel colors-panel">
+                                <button id="red" class="color-button redcolor-button picked" onclick="changeColor('#FF0000', this)"></button>
+                                <button id="green" class="color-button greencolor-button" onclick="changeColor('#00FF00', this)"></button>
+                                <button id="blue" class="color-button bluecolor-button" onclick="changeColor('#0000FF', this)"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-wrapper">Инструкция</div>
+                    <div class="frame">
+                        <div class="shortcuts">
+                            <div class="div-2">
+                                <div class="div-wrapper">
+                                    <div class="text-wrapper-4">E</div>
+                                </div>
+                                <div class="text-wrapper-5">=&nbsp;&nbsp; Undo</div>
+                            </div>
+                            <div class="div-2">
+                                <div class="div-wrapper">
+                                    <div class="text-wrapper-4">C</div>
+                                </div>
+                                <div class="text-wrapper-5">=&nbsp;&nbsp; Clear</div>
+                            </div>
+                        </div>
+                        <div class="shortcuts">
+                            <div class="div-2">
+                                <div class="div-wrapper">
+                                    <div class="text-wrapper-4">R</div>
+                                </div>
+                                <div class="text-wrapper-5">=&nbsp;&nbsp; Redo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="/js/drawingShapes.js"></script>
+</html>

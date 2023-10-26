@@ -1,0 +1,61 @@
+
+:root {
+    --active: 0px 0.922285795211792px 0.3835679292678833px 0px rgba(5, 77, 255, 0.06),
+      0px 1.9810400009155273px 1.2389967441558838px 0px rgba(5, 77, 255, 0.07),
+      0px 3.3892664909362793px 2.7452685832977295px 0px rgba(5, 77, 255, 0.08),
+      0px 5.580626964569092px 5.215717792510986px 0px rgba(5, 77, 255, 0.09),
+      0px 9.389728546142578px 9.284402847290039px 0px rgba(5, 77, 255, 0.11),
+      0px 16.012451171875px 16.59721565246582px 0px rgba(5, 77, 255, 0.14), 0px 26px 34px 0px rgba(5, 77, 255, 0.18);
+    --be-vietnam-list-font-family: "BeVietnam-Light", Helvetica;
+    --be-vietnam-list-font-size: 16px;
+    --be-vietnam-list-font-style: normal;
+    --be-vietnam-list-font-weight: 300;
+    --be-vietnam-list-letter-spacing: 0px;
+    --be-vietnam-list-line-height: 160.0000023841858%;
+    --black-0: rgba(74, 74, 74, 1);
+    --black-1: rgba(164, 164, 164, 1);
+    --blue-0: rgba(5, 77, 255, 1);
+    --blue-1: rgba(38, 49, 98, 1);
+    --blue-2: rgba(178, 199, 251, 1);
+    --blue-3: rgba(241, 243, 252, 1);
+    --body-body-bold-font-family: "BeVietnam-Bold", Helvetica;
+    --body-body-bold-font-size: 16px;
+    --body-body-bold-font-style: normal;
+    --body-body-bold-font-weight: 700;
+    --body-body-bold-letter-spacing: 0px;
+    --body-body-bold-line-height: 150%;
+    --body-body-regular-font-family: "BeVietnam-Regular", Helvetica;
+    --body-body-regular-font-size: 16px;
+    --body-body-regular-font-style: normal;
+    --body-body-regular-font-weight: 400;
+    --body-body-regular-letter-spacing: 0px;
+    --body-body-regular-line-height: 150%;
+    --FIAT-heading-1-font-family: "FIATADVERT01A-Rg", Helvetica;
+    --FIAT-heading-1-font-size: 32px;
+    --FIAT-heading-1-font-style: normal;
+    --FIAT-heading-1-font-weight: 400;
+    --FIAT-heading-1-letter-spacing: 1.6px;
+    --FIAT-heading-1-line-height: normal;
+    --green-0: rgba(68, 200, 151, 1);
+    --heading-font-family: "iCielKLA Love of Thunder-Regular", Helvetica;
+    --heading-font-size: 40px;
+    --heading-font-style: normal;
+    --heading-font-weight: 400;
+    --heading-letter-spacing: 0px;
+    --heading-line-height: normal;
+    --note-font-family: "BeVietnam-Regular", Helvetica;
+    --note-font-size: 14px;
+    --note-font-style: normal;
+    --note-font-weight: 400;
+    --note-letter-spacing: 0px;
+    --note-line-height: 150%;
+    --orange-0: rgba(255, 107, 23, 1);
+    --sub-heading-font-family: "BeVietnam-Regular", Helvetica;
+    --sub-heading-font-size: 20px;
+    --sub-heading-font-style: normal;
+    --sub-heading-font-weight: 400;
+    --sub-heading-letter-spacing: 0px;
+    --sub-heading-line-height: 150%;
+    --white: rgba(255, 255, 255, 1);
+    --yellow-0: rgba(255, 177, 0, 1);
+  }

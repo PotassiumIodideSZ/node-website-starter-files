@@ -1,133 +1,401 @@
-/* ==========================================================================
-   #STYLES
-   ========================================================================== */
 
-
-/**
- *
- * [1]: Inheriting box sizing slightly better best-practice
- * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- *
- * [2]: WordPress System font-stack
- */
-
-
-/* RESET
-   ========================================================================== */
-
-
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit; /* [1] */
-  margin: 0;
-  padding: 0;
-}
-
-
-
-/* FONTS
-   ========================================================================== */
-
-body {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; /* [2] */
-}
-
-
-
-/* Header
-   ========================================================================== */
-
-.header {
-  width: 100%;
+.day {
+  background-color: #263162;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  height: 80px;
-  background-color: #525286;
-  color: #FFFFFF;
-  margin-bottom: 50px;
-}
-
-
-
-/* Homepage Container
-   ========================================================================== */
-
-.container {
-  width: 960px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-
-
-
-/* Profile Card
-   ========================================================================== */
-
-.person {
-  text-align: center;
-}
-
-.person > * {
-  margin-bottom: 5px;
-}
-
-.person-image {
-  width: 100%;
-  height: 300px;
-}
-
-
-
-/* Profile Page
-   ========================================================================== */
-
-.profile {
-  display: flex;
-  height: 100vh;
   width: 100%;
 }
 
-.profile-image {
+.day .div {
+  background-color: var(--blue-1);
+  width: 1440px;
+  height: 900px;
+  position: relative;
+}
+
+.day .board {
+  flex: 2;
+}
+
+.day .canvas-wrapper {
+  width: 100%;
   height: 100%;
-  flex-grow: 1;
-  flex-basis: 50%;
 }
 
-.profile-details {
-  flex-basis: 30%;
-  flex-grow: 1;
-  padding: 50px;
+.canvas{
+  position: absolute;
+}
+
+.day .sidebar {
+  flex: 1;
+  justify-content: space-evenly;
+  margin-top: 60px;
+}
+
+.day .top-section {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  width: 328px;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  flex: 0 0 auto;
 }
 
-.profile-details > * {
+.day .title {
+  position: relative;
+  width: 286px;
+  margin-top: -1px;
+  font-family: "Be Vietnam-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--yellow-0);
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 48px;
+}
+
+.divider {
+  position: relative;
+  align-self: stretch;
+  height: 2px;
+  background-color: gray;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-
-
-/* Buttons
-   ========================================================================== */
-
-.button {
-  height: 50px;
-  line-height: 50px;
+.day .how-to {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  align-self: stretch;
   width: 100%;
-  text-decoration: none;
-  text-align: center;
-  font-size: 20px
+  flex: 0 0 auto;
 }
 
-.button-twitter {
-  color: #FFFFFF;
-  background-color: #659AF1;
-  border-radius: 5px;
+.day .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: var(--FIAT-heading-1-font-family);
+  font-weight: var(--FIAT-heading-1-font-weight);
+  color: var(--green-0);
+  font-size: var(--FIAT-heading-1-font-size);
+  letter-spacing: var(--FIAT-heading-1-letter-spacing);
+  line-height: var(--FIAT-heading-1-line-height);
+  font-style: var(--FIAT-heading-1-font-style);
+}
+
+.day .instructions {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.day .instruction {
+  position: relative;
+  width: 328px;
+  margin-top: -1px;
+  font-family: "Be Vietnam-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--blue-3);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.day .flexcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 328px;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.day .text-i {
+  position: relative;
+  align-self: stretch;
+  font-family: var(--be-vietnam-list-font-family);
+  font-weight: var(--be-vietnam-list-font-weight);
+  color: var(--blue-3);
+  font-size: var(--be-vietnam-list-font-size);
+  letter-spacing: var(--be-vietnam-list-letter-spacing);
+  line-height: var(--be-vietnam-list-line-height);
+  font-style: var(--be-vietnam-list-font-style);
+}
+
+.day .span {
+  font-family: var(--be-vietnam-list-font-family);
+  font-weight: var(--be-vietnam-list-font-weight);
+  color: #f1f3fc;
+  font-size: var(--be-vietnam-list-font-size);
+  letter-spacing: var(--be-vietnam-list-letter-spacing);
+  line-height: var(--be-vietnam-list-line-height);
+  font-style: var(--be-vietnam-list-font-style);
+}
+
+.day .span-wrapper {
+  position: relative;
+  align-self: stretch;
+  font-family: "Be Vietnam-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--blue-3);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.day .text-wrapper-2 {
+  font-family: "Be Vietnam-Regular", Helvetica;
+  font-weight: 400;
+  color: #f1f3fc;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.day .text-wrapper-3 {
+  font-family: "Be Vietnam-Bold", Helvetica;
+  font-weight: 700;
+}
+
+.day .frame {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 56px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.day .shortcuts {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.day .div-2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.day .div-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 5px 0px #b1b5c9cc;
+}
+
+.day .text-wrapper-4 {
+  position: absolute;
+  top: 2px;
+  left: 14px;
+  font-family: "Be Vietnam-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--blue-1);
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.day .text-wrapper-5 {
+  position: relative;
+  width: fit-content;
+  font-family: "Be Vietnam-Bold", Helvetica;
+  font-weight: 700;
+  color: #b1b5c9;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 22.4px;
+  white-space: nowrap;
+}
+
+.day .credit {
+  display: flex;
+  flex-direction: column;
+  width: 328px;
+  align-items: flex-start;
+  padding: 16px 16px 16px 24px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #f1f3fc0d;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.day .container {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 185px;
+}
+
+.day .overlap-group {
+  position: relative;
+  width: 304px;
+  height: 185px;
+}
+
+.day .thng-nguyn-logo {
+  position: absolute;
+  width: 155px;
+  height: 185px;
+  top: 0;
+  left: 149px;
+}
+
+.day .logo-text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+
+.day .BROS-logo {
+  position: relative;
+  width: 71px;
+  height: 37px;
+}
+
+.day .p {
+  position: relative;
+  width: 249px;
+  font-family: var(--body-body-regular-font-family);
+  font-weight: var(--body-body-regular-font-weight);
+  color: var(--blue-3);
+  font-size: var(--body-body-regular-font-size);
+  letter-spacing: var(--body-body-regular-letter-spacing);
+  line-height: var(--body-body-regular-line-height);
+  font-style: var(--body-body-regular-font-style);
+}
+body{
+  background-color: #263162;
+  margin: 0;
+}
+  
+.instruction{
+  margin-bottom: 50px;
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: var(--FIAT-heading-1-font-family);
+  font-weight: var(--FIAT-heading-1-font-weight);
+  color: var(--green-0);
+  font-size: var(--FIAT-heading-1-font-size);
+  letter-spacing: var(--FIAT-heading-1-letter-spacing);
+  line-height: var(--FIAT-heading-1-line-height);
+  font-style: var(--FIAT-heading-1-font-style);
+}
+.shape-button-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-button-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.shape-button-panel button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 30%;
+  background-color: rgb(255, 255, 255);
+  font-size: 40px;
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+}
+
+.shapes-panel-panel button:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+.shapes-panel button:active {
+  background-color: rgb(167, 167, 167);
+  transform: translateY(2px);
+}
+.shapes-panel button.picked {
+  background-color: rgb(167, 167, 167);
+}
+
+.board {
+  display: inline-block;
+  margin: 60px;
+  border: 10px solid #6f8af7;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.maindiv-wrapper{
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.colors-panel .redcolor-button{
+  background-color: rgb(255, 0, 0);
+}
+.colors-panel .redcolor-button:hover{
+  background-color: rgb(190, 0, 0);
+}
+.colors-panel .redcolor-button:active{
+  background-color: rgb(110, 0, 0);
+}
+.colors-panel .redcolor-button.picked{
+  background-color: rgb(110, 0, 0);
+}
+.colors-panel .greencolor-button{
+  background-color: rgb(0, 255, 0);
+}
+.colors-panel .greencolor-button:hover{
+  background-color: rgb(0, 190, 0);
+}
+.colors-panel .greencolor-button:active{
+  background-color: rgb(0, 110, 0);
+}
+.colors-panel .greencolor-button.picked{
+  background-color: rgb(0, 110, 0);
+}
+.colors-panel .bluecolor-button{
+  background-color: rgb(0, 0, 255);
+}
+.colors-panel .bluecolor-button:hover{
+  background-color: rgb(0, 0, 190);
+}
+.colors-panel .bluecolor-button:active{
+  background-color: rgb(0, 0, 110);
+}
+.colors-panel .bluecolor-button.picked{
+  background-color: rgb(0, 0, 110);
+}
+
+.color-button-panel button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 30%;
+  background-color: rgb(255, 255, 255);
+  font-size: 40px;
+  cursor: pointer;
 }
